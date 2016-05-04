@@ -126,7 +126,7 @@ If not done before:
 * Open ios project from `SdkboxIAP/platforms/ios/SdkboxIAP_Cordova.xcodeproj`
 
 Add a valid `sdkbox_config.json` file to Resources. (see Android integration for a valid example).
-Rename the files `SdkboxIAP/platforms/ios/SdkboxIAP_Cordova/Classes/AppDelegate.m` and `SdkboxIAP/platforms/ios/SdkboxIAP_Cordova/Classes/AppDelegate.m` to have `.mm` extension.
+Rename the files `SdkboxIAP/platforms/ios/SdkboxIAP_Cordova/Classes/AppDelegate.m` and `SdkboxIAP/platforms/ios/SdkboxIAP_Cordova/Classes/MainViewController.m` to have `.mm` extension.
 
 * Compile app
 
