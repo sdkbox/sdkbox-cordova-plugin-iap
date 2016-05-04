@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="sdkbox-plugin-iap" version="1.0.1">
+    <name>SdkboxIAP</name>
+    <description>Sdkbox IAP plugin</description>
+    <license>MPL 2.0</license>
+    <keywords>cordova,InApps,In app purchase,Billing,IAP</keywords>
+    <repo>https://github.com/sdkbox/sdkbox-cordova-iap</repo>    
+
+    <platform name="ios">
+
+        <config-file target="config.xml" parent="/*">
+            <feature name="SdkboxIAP" >
+                <param name="ios-package" value="SDKBoxIAP"/>
+            </feature>
+        </config-file>
+
+
+        <framework src="CoreLocation.framework" />
+        <framework src="SystemConfiguration.framework" />
+        <framework src="StoreKit.framework" />
+        <framework src="src/ios/frameworks/sdkbox.framework" custom="true" />
+        <framework src="src/ios/frameworks/PluginIAP.framework" custom="true" />
+
+        <js-module src="www/sdkbox_iap.js" name="IAPService">
+            <runs/>
+            <clobbers target="sdkbox.PluginIAP"/>
+        </js-module> 
+
+    </platform>
+
+    <platform name="android">
+        <source-file src="src/android/sdkboxiap_binary.jar" target-dir="libs"/>
+
+        <js-module src="www/sdkbox_iap.js" name="IAPService">
+            <runs/>
+            <clobbers target="sdkbox.PluginIAP"/>
+        </js-module> 
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="SdkboxIAP" >
+                <param name="android-package" value="com.sdkbox.plugin.SDKBoxIAPGooglePlay"/>
+            </feature>
+        </config-file>
+ 
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="com.android.vending.BILLING" />            
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        </config-file>  
+
+        <framework src="com.google.android.gms:play-services:8.4.0" />
+
+    </platform>
+
+    <!-- <dependency id="" /> -->
+</plugin>
