@@ -114,3 +114,18 @@ Leave it as: `versionCode cdvVersionCode ?: Integer.parseInt("" + privateHelpers
 
 You can check the `versionCode` by executing `aapt l -a <an apk file> | grep versionCode`.
 The result should be the one you specified.
+
+# iOS integration
+
+`cordova platform add ios`
+If not done before:
+`cordova plugin add https://github.com/sdkbox/sdkbox-cordova-plugin-iap.git --save`
+
+* Open ios project from `SdkboxIAP/platforms/ios/SdkboxIAP_Cordova.xcodeproj`
+
+Add a valid `sdkbox_config.json` file to Resources. (see Android integration for a valid example).
+Rename the files `SdkboxIAP/platforms/ios/SdkboxIAP_Cordova/Classes/AppDelegate.m` and `SdkboxIAP/platforms/ios/SdkboxIAP_Cordova/Classes/AppDelegate.m` to have `.mm` extension.
+
+* Compile app
+
+`cordova build ios --release`
