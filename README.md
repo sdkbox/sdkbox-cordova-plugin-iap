@@ -41,7 +41,7 @@ A valid example would be:
 * Set your application code, by modifying the `www` folder contents.
 * Compile the application:
 
-`cordova build android`
+`cordova build android --release`
 
 * Cypher/zipalign your application:
 
