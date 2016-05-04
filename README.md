@@ -118,7 +118,9 @@ The result should be the one you specified.
 # iOS integration
 
 `cordova platform add ios`
+
 If not done before:
+
 `cordova plugin add https://github.com/sdkbox/sdkbox-cordova-plugin-iap.git --save`
 
 * Open ios project from `SdkboxIAP/platforms/ios/SdkboxIAP_Cordova.xcodeproj`
