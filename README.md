@@ -1,10 +1,11 @@
 # Create application
 
-cordova create SdkboxIAP org.cocos2dx.PluginTest SdkboxIAP_Cordova
+`cordova create SdkboxIAP org.cocos2dx.PluginTest SdkboxIAP_Cordova`
 
 # Android integration
 
 `cordova platform add android`
+
 `cordova plugin add https://github.com/sdkbox/sdkbox-cordova-plugin-iap.git --save`
 
 * Add configuration file [will be changed in favour of integrating the json file from javascript].
@@ -75,7 +76,7 @@ by removing the trailing `"0"`.
 Leave it as: `versionCode cdvVersionCode ?: Integer.parseInt("" + privateHelpers.extractIntFromManifest("versionCode") )`
 * remove/comment lines 180-210
 
-```json
+```gradle
 
 // this block out
     if (Boolean.valueOf(cdvBuildMultipleApks)) {
