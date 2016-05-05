@@ -2,46 +2,13 @@
 
 `cordova create SdkboxIAP org.cocos2dx.PluginTest SdkboxIAP_Cordova`
 
-# Android integration
+## Android integration
 
 `cordova platform add android`
 
 `cordova plugin add https://github.com/sdkbox/sdkbox-cordova-plugin-iap.git --save`
 
-* Add configuration file [will be changed in favour of integrating the json file from javascript].
-
-Copy a valid sdkbox_config.json file to SdkboxIAP/platforms/android/assets
-A valid example would be:
-```json
-{
-  "android": {
-    "iap": {
-      "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq7eIGu7dRcBRBSC05cYvxjBMd7cqq9w6++1er+cqO2tyWPtWB4vuTkliq4k/Fkylx5UMfptdOYOW8ENgQyVucs/NyuOAGmve4j5JFhLPcLa6LjO2HUSY6zk04DRR9Zw7YPET4WAezZTz8jYMGhPG08HYltVj8cmSpSFWd1nI0pGOJoLQIMkIkXplgnPQRbMpuOu70vnQQBS1RFcoFT7OjaV8U0cfJzMoS1TMkGqaJKks2T+qOBNTtkXzge92EnvYIkhpCfN98dj6aQmETNp5yj5Fa+jcbAVF8dy5xymJwioL89XQKfKkGR+P6ESMoBEPfIZYIlMU8EUwmC+UKGLujQIDAQAB",
-      "items": {
-        "remove_ads": {
-          "id": "com.cocos2dx.non1",
-          "type": "non_consumable"
-        },
-        "double_coin": {
-          "id": "com.cocos2dx.non2",
-          "type": "non_consumable"
-        },
-        "coin_package": {
-          "id": "com.cocos2dx.plugintest2"
-        },
-        "coin_package2": {
-          "id": "com.cocos2dx.plugintest3"
-        }
-      }
-    }
-  }
-}
-```
-
 * Set your application code, by modifying the `www` folder contents.
-* Compile the application:
-
-`cordova build android --release`
 
 * Cypher/zipalign your application:
 
@@ -54,8 +21,28 @@ keyAlias=<alias name>
 storePassword=
 keyPassword=
 ```
+* Compile the application:
 
-### Gotchas [If it is the first time you submit a cordova App for IAP, forget about this, but anyway, worth to know info].
+`cordova build android --release`
+
+
+## iOS integration
+
+`cordova platform add ios`
+
+`cordova plugin add https://github.com/sdkbox/sdkbox-cordova-plugin-iap.git --save`
+
+Rename the files `SdkboxIAP/platforms/ios/SdkboxIAP_Cordova/Classes/AppDelegate.m` and `SdkboxIAP/platforms/ios/SdkboxIAP_Cordova/Classes/MainViewController.m` to have `.mm` extension.
+
+* Set your application code, by modifying the `www` folder contents.
+
+`cordova build ios --release`
+
+
+
+
+
+### Android Gotchas, how to set a specific versionCode/versionName [If it is the first time you submit a cordova App for IAP, forget about this, but anyway, worth to know info].
 
 The default gradle file to build a Cordova app, mangles the application's manifest versionCode with some black witchery, which renders mostly impossible to have an specific version code. This is needed to submit IAP enabled apps to the google play store.
 In order to have finer control over `versionName` and `versionCode`, you have to:
@@ -114,20 +101,3 @@ Leave it as: `versionCode cdvVersionCode ?: Integer.parseInt("" + privateHelpers
 
 You can check the `versionCode` by executing `aapt l -a <an apk file> | grep versionCode`.
 The result should be the one you specified.
-
-# iOS integration
-
-`cordova platform add ios`
-
-If not done before:
-
-`cordova plugin add https://github.com/sdkbox/sdkbox-cordova-plugin-iap.git --save`
-
-* Open ios project from `SdkboxIAP/platforms/ios/SdkboxIAP_Cordova.xcodeproj`
-
-Add a valid `sdkbox_config.json` file to Resources. (see Android integration for a valid example).
-Rename the files `SdkboxIAP/platforms/ios/SdkboxIAP_Cordova/Classes/AppDelegate.m` and `SdkboxIAP/platforms/ios/SdkboxIAP_Cordova/Classes/MainViewController.m` to have `.mm` extension.
-
-* Compile app
-
-`cordova build ios --release`

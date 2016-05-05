@@ -19,12 +19,13 @@ module.exports = {
 
     initPlugin : function( config, success, error ) {
 
-               var params = [];
-               if ( typeof config!=="undefined" && typeof app_id!=="undefined" && typeof app_secret!=="undefined" ) {
-               params.push( config.app_id);
-               params.push( config.app_secret );
-               }
-               
+       var params = [];
+       if ( typeof config!=="undefined" && typeof config==="object") {
+           params.push( config);
+       } else {
+            console.info("No configuration or  configuration is not an object.");
+       }
+
         __exec(
             "initPlugin",
             success,
