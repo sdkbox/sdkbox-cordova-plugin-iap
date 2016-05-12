@@ -1,0 +1,35 @@
+{
+  "name": "SdkboxIAP",
+  "version": "1.0.1",
+  "description": "Sdkbox IAP plugin",
+  "cordova": {
+    "id": "sdkbox-plugin-iap",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdkbox/sdkbox-cordova-plugin-iap.git"
+  },
+  "keywords": [
+    "cordova",
+    "InApps",
+    "In app purchase",
+    "Billing",
+    "IAP",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android"
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "sdkbox.com",
+  "license": "MPL 2.0",
+  "bugs": {
+    "url": "https://github.com/sdkbox/sdkbox-cordova-plugin-iap/issues"
+  },
+  "homepage": "https://github.com/sdkbox/sdkbox-cordova-plugin-iap#readme"
+}

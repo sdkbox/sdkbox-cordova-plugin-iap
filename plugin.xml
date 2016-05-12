@@ -5,7 +5,8 @@
     <description>Sdkbox IAP plugin</description>
     <license>MPL 2.0</license>
     <keywords>cordova,InApps,In app purchase,Billing,IAP</keywords>
-    <repo>https://github.com/sdkbox/sdkbox-cordova-iap</repo>    
+    <repo>https://github.com/sdkbox/sdkbox-cordova-plugin-iap</repo>    
+    <issues>https://github.com/sdkbox/sdkbox-cordova-plugin-iap/issues</issues>    
 
     <platform name="ios">
 
