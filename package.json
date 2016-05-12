@@ -1,7 +1,7 @@
 {
-  "name": "SdkboxIAP",
-  "version": "1.0.1",
-  "description": "Sdkbox IAP plugin",
+  "name": "cordova-plugin-ios-android-IAP",
+  "version": "1.0.3",
+  "description": "Cross-platform In App Purchase plugin for both iOS (Apple) and Android (Google)",
   "cordova": {
     "id": "sdkbox-plugin-iap",
     "platforms": [
@@ -19,12 +19,10 @@
     "In app purchase",
     "Billing",
     "IAP",
+    "appstore", "google play", "cross platform", "games", "sdkbox",
     "ecosystem:cordova",
     "cordova-ios",
     "cordova-android"
-    "ecosystem:cordova",
-    "cordova-android",
-    "cordova-ios"
   ],
   "author": "sdkbox.com",
   "license": "MPL 2.0",
