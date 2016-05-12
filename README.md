@@ -90,7 +90,7 @@ sdkbox.PluginIAP.initPlugin(
 
 The `initialization_data` is a JSON object with the following structure:
 
-```json
+```javascript
 {
     "config" : {
         "iap" : {
@@ -103,10 +103,10 @@ The `initialization_data` is a JSON object with the following structure:
             "key" : "string"                  //  android only
         }
     },
-    app_token : "string",
-    app_secret: "string",
-    debug :     "boolean",
-    enabled :   "boolean"
+    "app_token" : "string",
+    "app_secret": "string",
+    "debug" :     "boolean",
+    "enabled" :   "boolean"
 }
 ```
 
@@ -209,7 +209,7 @@ A call to
 
 will get the products info. `products` parameter is an array of object of the following form:
 
-```json
+```javascript
 {
     "id"            : "string",   // e.g.: com.cocos2dx.non1
     "title"         : "string",   // defined on the dev console
@@ -262,7 +262,7 @@ sdkbox.PluginIAP.purchase(
 
 The parameter `purchase_result` is of the form:
 
-```json
+```javascript
 {
     "sku" : "string"      // product id
     "original_json" : {
@@ -293,7 +293,7 @@ To restore purchases call:
 
 `products` parameter is an array of the form:
 
-```json
+```javascript
 [
     "<product-id>", ...
 ]
