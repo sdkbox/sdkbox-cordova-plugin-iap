@@ -1,0 +1,30 @@
+{
+    "sdkbox.framework": [
+        {
+            "link": "Headers",
+            "target": "Versions/A/Headers"
+        },
+        {
+            "link": "sdkbox",
+            "target": "Versions/A/sdkbox"
+        },
+        {
+            "link": "Versions/Current",
+            "target": "A"
+        }
+    ],
+    "PluginIAP.framework": [
+        {
+            "link": "Headers",
+            "target": "Versions/A/Headers"
+        },
+        {
+            "link": "PluginIAP",
+            "target": "Versions/A/PluginIAP"
+        },
+        {
+            "link": "Versions/Current",
+            "target": "A"
+        }
+    ]
+}

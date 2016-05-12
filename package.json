@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-ios-android-IAP",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "description": "Cross-platform In App Purchase plugin for both iOS (Apple) and Android (Google)",
   "cordova": {
     "id": "sdkbox-plugin-iap",
@@ -9,9 +9,12 @@
       "android"
     ]
   },
+  "scripts": {
+    "prepublish": "node ./scripts/saveframeworksmetadata.js"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sdkbox/sdkbox-cordova-plugin-iap.git"
+    "url": "https://github.com/sdkbox/sdkbox-cordova-plugin-iap"
   },
   "keywords": [
     "cordova",

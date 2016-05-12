@@ -10,12 +10,13 @@
 
     <platform name="ios">
 
+        <hook type="before_compile" src="scripts/restoreframeworksmetadata.js" />
+
         <config-file target="config.xml" parent="/*">
             <feature name="SdkboxIAP" >
                 <param name="ios-package" value="SDKBoxIAP"/>
             </feature>
         </config-file>
-
 
         <framework src="CoreLocation.framework" />
         <framework src="SystemConfiguration.framework" />
@@ -56,6 +57,4 @@
         <framework src="com.google.android.gms:play-services:8.4.0" />
 
     </platform>
-
-    <!-- <dependency id="" /> -->
 </plugin>
