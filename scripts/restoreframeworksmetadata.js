@@ -33,13 +33,13 @@ module.exports = function (ctx) {
             var link = path.join(frameworkLocation, symlink.link);
             if (fs.existsSync(link)) {
                 fs.unlinkSync(link);
-            
-
-                // if (!fs.existsSync( path.join(frameworkLocation,symlink.target))) {
-                    console.log('\tRestoring symlink ' + symlink.link);
-                    fs.symlinkSync(symlink.target, link);
-                // }
             }
+
+            console.log('\tRestoring symlink ' + symlink.link);
+            try {
+                fs.symlinkSync(symlink.target, link);
+            } catch(e) {}
+            
         });
     });
 };
