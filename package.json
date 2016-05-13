@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-ios-android-IAP",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "Cross-platform In App Purchase plugin for both iOS (Apple) and Android (Google)",
   "cordova": {
     "id": "sdkbox-plugin-iap",

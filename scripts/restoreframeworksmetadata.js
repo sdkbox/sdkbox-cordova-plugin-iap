@@ -12,7 +12,7 @@ var PLATFORM = 'ios';
 
 module.exports = function (ctx) {
     // We want to restore symlinks on ios build only
-    if (ctx.opts.platforms.indexOf(PLATFORM) < 0 || process.platform !== 'darwin') return;
+    if (ctx.opts.cordova.platforms.indexOf(PLATFORM) < 0 || process.platform !== 'darwin') return;
 
     var symlinkMetadata = path.join(__dirname, '..', 'symlinkmetadata.json');
     // If there is no metadata for symlinks, just skip this step
