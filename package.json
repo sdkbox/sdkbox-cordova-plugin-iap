@@ -10,22 +10,16 @@
     ]
   },
   "scripts": {
-    "prepublish": "node ./scripts/saveframeworksmetadata.js"
+    "prepublish": "node ./scripts/saveframeworksmetadata.js",
+    "postinstall": "node ./scripts/restoreframeworksmetadata.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/sdkbox/sdkbox-cordova-plugin-iap"
   },
   "keywords": [
-    "cordova",
-    "InApps",
-    "In app purchase",
-    "Billing",
-    "IAP",
-    "appstore", "google play", "cross platform", "games", "sdkbox",
-    "ecosystem:cordova",
-    "cordova-ios",
-    "cordova-android"
+    "cordova", "InApps", "In app purchase", "Billing", "IAP", "appstore", "google play", "cross platform", "games", "sdkbox",
+    "ecosystem:cordova", "cordova-ios", "cordova-android"
   ],
   "author": "sdkbox.com",
   "license": "MPL 2.0",
