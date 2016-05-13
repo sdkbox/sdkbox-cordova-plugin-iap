@@ -35,8 +35,10 @@ module.exports = function (ctx) {
                 fs.unlinkSync(link);
             }
 
-            console.log('\tRestoring symlink ' + symlink.link);
-            fs.symlinkSync(symlink.target, link);
+            if (!fs.existsSync(symlink.target)) {
+                console.log('\tRestoring symlink ' + symlink.link);
+                fs.symlinkSync(symlink.target, link);
+            }
         });
     });
 };
